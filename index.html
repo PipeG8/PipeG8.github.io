@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Felipe Guzman Chaves | Data Scientist & Chemical Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+    rel="stylesheet" />
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --bg: #080808;
@@ -26,7 +35,9 @@
       --font-mono: 'DM Mono', monospace;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--bg);
@@ -39,7 +50,8 @@
     /* ─── CUSTOM CURSOR ─────────────────────────── */
     .cursor {
       position: fixed;
-      width: 10px; height: 10px;
+      width: 10px;
+      height: 10px;
       background: var(--accent);
       border-radius: 50%;
       pointer-events: none;
@@ -48,9 +60,11 @@
       transition: transform 0.1s, width 0.2s, height 0.2s, opacity 0.2s;
       mix-blend-mode: difference;
     }
+
     .cursor-ring {
       position: fixed;
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       border: 1px solid var(--accent);
       border-radius: 50%;
       pointer-events: none;
@@ -59,7 +73,10 @@
       transition: transform 0.15s ease, width 0.25s, height 0.25s, opacity 0.25s;
       opacity: 0.5;
     }
-    body:hover .cursor { opacity: 1; }
+
+    body:hover .cursor {
+      opacity: 1;
+    }
 
     /* ─── NOISE OVERLAY ─────────────────────────── */
     body::before {
@@ -75,13 +92,15 @@
     /* ─── NAVBAR ────────────────────────────────── */
     nav {
       position: fixed;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 1.25rem 3rem;
-      background: rgba(8,8,8,0.85);
+      background: rgba(8, 8, 8, 0.85);
       backdrop-filter: blur(16px);
       border-bottom: 1px solid var(--border);
     }
@@ -99,7 +118,8 @@
     }
 
     .logo-badge {
-      width: 36px; height: 36px;
+      width: 36px;
+      height: 36px;
       background: var(--accent);
       color: #080808;
       border-radius: 8px;
@@ -127,7 +147,10 @@
       text-transform: uppercase;
       transition: color 0.2s;
     }
-    .nav-links a:hover { color: var(--accent); }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
 
     .nav-right {
       display: flex;
@@ -147,8 +170,15 @@
       display: flex;
       align-items: center;
     }
-    .nav-social a:hover { color: var(--accent); }
-    .nav-social svg { width: 16px; height: 16px; }
+
+    .nav-social a:hover {
+      color: var(--accent);
+    }
+
+    .nav-social svg {
+      width: 16px;
+      height: 16px;
+    }
 
     .lang-toggle {
       font-family: var(--font-mono);
@@ -162,7 +192,11 @@
       transition: all 0.2s;
       border-radius: 4px;
     }
-    .lang-toggle:hover { border-color: var(--accent); color: var(--accent); }
+
+    .lang-toggle:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
 
     /* ─── HERO ──────────────────────────────────── */
     #hero {
@@ -188,9 +222,11 @@
 
     .hero-glow {
       position: absolute;
-      top: -200px; right: -200px;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(200,245,66,0.06) 0%, transparent 70%);
+      top: -200px;
+      right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(200, 245, 66, 0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -210,15 +246,27 @@
       width: fit-content;
       animation: fadeUp 0.6s ease both;
     }
+
     .badge-dot {
-      width: 6px; height: 6px;
+      width: 6px;
+      height: 6px;
       background: var(--accent);
       border-radius: 50%;
       animation: pulse 1.8s ease infinite;
     }
+
     @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.4; transform: scale(0.7); }
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+      }
     }
 
     .hero-name {
@@ -230,7 +278,9 @@
       animation: fadeUp 0.6s 0.1s ease both;
     }
 
-    .hero-name span { color: var(--accent); }
+    .hero-name span {
+      color: var(--accent);
+    }
 
     .hero-subtitle {
       font-family: var(--font-mono);
@@ -273,7 +323,12 @@
       transition: all 0.2s;
       cursor: none;
     }
-    .btn-primary:hover { background: #d4ff55; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,245,66,0.25); }
+
+    .btn-primary:hover {
+      background: #d4ff55;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200, 245, 66, 0.25);
+    }
 
     .btn-outline {
       display: inline-flex;
@@ -291,11 +346,16 @@
       transition: all 0.2s;
       cursor: none;
     }
-    .btn-outline:hover { border-color: var(--text-mid); transform: translateY(-2px); }
+
+    .btn-outline:hover {
+      border-color: var(--text-mid);
+      transform: translateY(-2px);
+    }
 
     .hero-scroll {
       position: absolute;
-      bottom: 2.5rem; left: 3rem;
+      bottom: 2.5rem;
+      left: 3rem;
       display: flex;
       align-items: center;
       gap: 0.75rem;
@@ -306,8 +366,10 @@
       text-transform: uppercase;
       animation: fadeUp 0.6s 0.6s ease both;
     }
+
     .scroll-line {
-      width: 40px; height: 1px;
+      width: 40px;
+      height: 1px;
       background: var(--border-light);
     }
 
@@ -350,7 +412,9 @@
       align-items: start;
     }
 
-    .about-left .section-title { margin-bottom: 1.5rem; }
+    .about-left .section-title {
+      margin-bottom: 1.5rem;
+    }
 
     .about-text {
       color: var(--text-mid);
@@ -378,11 +442,27 @@
       border-radius: 8px;
       transition: all 0.2s;
     }
-    .skill-item:hover { border-color: var(--accent-border); color: var(--text); background: var(--bg-card-hover); }
-    .skill-dot { width: 6px; height: 6px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+
+    .skill-item:hover {
+      border-color: var(--accent-border);
+      color: var(--text);
+      background: var(--bg-card-hover);
+    }
+
+    .skill-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
 
     /* Experience timeline */
-    .exp-timeline { display: flex; flex-direction: column; gap: 0; }
+    .exp-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
 
     .exp-item {
       padding: 1.75rem 0;
@@ -391,16 +471,22 @@
       padding-left: 1.5rem;
       transition: all 0.2s;
     }
+
     .exp-item::before {
       content: '';
       position: absolute;
-      left: 0; top: 1.75rem;
-      width: 6px; height: 6px;
+      left: 0;
+      top: 1.75rem;
+      width: 6px;
+      height: 6px;
       border: 1px solid var(--accent);
       border-radius: 50%;
       background: var(--bg);
     }
-    .exp-item:hover::before { background: var(--accent); }
+
+    .exp-item:hover::before {
+      background: var(--accent);
+    }
 
     .exp-period {
       font-family: var(--font-mono);
@@ -409,12 +495,29 @@
       color: var(--text-muted);
       margin-bottom: 0.4rem;
     }
-    .exp-role { font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
-    .exp-company { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem; }
-    .exp-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+
+    .exp-role {
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .exp-company {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .exp-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
 
     /* ─── PROJECTS ──────────────────────────────── */
-    #projects { padding-top: 4rem; }
+    #projects {
+      padding-top: 4rem;
+    }
 
     .projects-header {
       display: flex;
@@ -438,18 +541,31 @@
       cursor: none;
       position: relative;
     }
-    .project-card:hover { border-color: var(--accent-border); transform: translateY(-4px); background: var(--bg-card-hover); box-shadow: 0 20px 48px rgba(0,0,0,0.5); }
-    .project-card:first-child { grid-column: span 2; }
+
+    .project-card:hover {
+      border-color: var(--accent-border);
+      transform: translateY(-4px);
+      background: var(--bg-card-hover);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5);
+    }
+
+    .project-card:first-child {
+      grid-column: span 2;
+    }
 
     .project-visual {
       height: 180px;
       position: relative;
       overflow: hidden;
     }
-    .project-card:first-child .project-visual { height: 220px; }
+
+    .project-card:first-child .project-visual {
+      height: 220px;
+    }
 
     .project-visual-inner {
-      width: 100%; height: 100%;
+      width: 100%;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -457,13 +573,23 @@
     }
 
     /* Project visual themes */
-    .pv-1 { background: linear-gradient(135deg, #0d1a00 0%, #1a3300 50%, #0a1000 100%); }
-    .pv-2 { background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%); }
-    .pv-3 { background: linear-gradient(135deg, #0f0800 0%, #1a1000 100%); }
+    .pv-1 {
+      background: linear-gradient(135deg, #0d1a00 0%, #1a3300 50%, #0a1000 100%);
+    }
+
+    .pv-2 {
+      background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+    }
+
+    .pv-3 {
+      background: linear-gradient(135deg, #0f0800 0%, #1a1000 100%);
+    }
 
     .pv-chart {
       position: absolute;
-      bottom: 0; left: 0; right: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
       height: 100%;
       display: flex;
       align-items: flex-end;
@@ -471,6 +597,7 @@
       padding: 16px 20px;
       opacity: 0.6;
     }
+
     .bar {
       flex: 1;
       border-radius: 3px 3px 0 0;
@@ -485,7 +612,12 @@
       align-items: center;
       justify-content: center;
     }
-    .pv-lines svg { width: 80%; height: 80%; opacity: 0.4; }
+
+    .pv-lines svg {
+      width: 80%;
+      height: 80%;
+      opacity: 0.4;
+    }
 
     .pv-hex {
       display: grid;
@@ -494,8 +626,10 @@
       padding: 20px;
       opacity: 0.3;
     }
+
     .hex-cell {
-      width: 20px; height: 20px;
+      width: 20px;
+      height: 20px;
       background: var(--accent);
       border-radius: 3px;
       opacity: 0.4;
@@ -503,22 +637,36 @@
 
     .project-badge {
       position: absolute;
-      top: 1rem; left: 1rem;
+      top: 1rem;
+      left: 1rem;
       font-family: var(--font-mono);
       font-size: 0.6rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 0.3rem 0.7rem;
-      background: rgba(8,8,8,0.8);
+      background: rgba(8, 8, 8, 0.8);
       border: 1px solid var(--border-light);
       border-radius: 100px;
       color: var(--text-muted);
       backdrop-filter: blur(8px);
     }
 
-    .project-body { padding: 1.5rem; }
-    .project-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.6rem; }
-    .project-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .project-body {
+      padding: 1.5rem;
+    }
+
+    .project-title {
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
 
     .project-tags {
       display: flex;
@@ -526,6 +674,7 @@
       gap: 0.4rem;
       margin-bottom: 1.25rem;
     }
+
     .tag {
       font-family: var(--font-mono);
       font-size: 0.65rem;
@@ -548,8 +697,15 @@
       gap: 0.4rem;
       transition: color 0.2s;
     }
-    .project-link:hover { color: var(--accent); }
-    .project-link svg { width: 12px; height: 12px; }
+
+    .project-link:hover {
+      color: var(--accent);
+    }
+
+    .project-link svg {
+      width: 12px;
+      height: 12px;
+    }
 
     /* ─── CONTACT ───────────────────────────────── */
     #contact {
@@ -561,10 +717,12 @@
     #contact::before {
       content: '';
       position: absolute;
-      top: 50%; left: 50%;
+      top: 50%;
+      left: 50%;
       transform: translate(-50%, -50%);
-      width: 500px; height: 400px;
-      background: radial-gradient(ellipse, rgba(200,245,66,0.04) 0%, transparent 70%);
+      width: 500px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(200, 245, 66, 0.04) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -600,10 +758,32 @@
       transition: all 0.25s;
       cursor: none;
     }
-    .contact-card:hover { border-color: var(--accent-border); background: var(--bg-card-hover); transform: translateY(-3px); }
-    .contact-card svg { width: 18px; height: 18px; color: var(--accent); }
-    .contact-label { font-size: 0.8rem; color: var(--text-muted); font-family: var(--font-mono); display: block; margin-bottom: 0.1rem; letter-spacing: 0.05em; }
-    .contact-value { font-size: 0.9rem; font-weight: 600; }
+
+    .contact-card:hover {
+      border-color: var(--accent-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .contact-card svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent);
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      display: block;
+      margin-bottom: 0.1rem;
+      letter-spacing: 0.05em;
+    }
+
+    .contact-value {
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
 
     /* ─── FOOTER ────────────────────────────────── */
     footer {
@@ -623,8 +803,15 @@
 
     /* ─── ANIMATIONS ────────────────────────────── */
     @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .reveal {
@@ -632,16 +819,29 @@
       transform: translateY(24px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    .reveal-delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal-delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal-delay-3 {
+      transition-delay: 0.3s;
+    }
 
     /* ─── MODAL ─────────────────────────────────── */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(8,8,8,0.92);
+      background: rgba(8, 8, 8, 0.92);
       backdrop-filter: blur(12px);
       z-index: 1000;
       display: flex;
@@ -651,7 +851,11 @@
       pointer-events: none;
       transition: opacity 0.3s;
     }
-    .modal-overlay.open { opacity: 1; pointer-events: all; }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     .modal {
       background: var(--bg-card);
@@ -663,7 +867,10 @@
       transform: translateY(20px);
       transition: transform 0.3s;
     }
-    .modal-overlay.open .modal { transform: none; }
+
+    .modal-overlay.open .modal {
+      transform: none;
+    }
 
     .modal-header {
       display: flex;
@@ -671,12 +878,18 @@
       justify-content: space-between;
       margin-bottom: 1.5rem;
     }
-    .modal-title { font-weight: 700; font-size: 1.1rem; }
+
+    .modal-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
     .modal-close {
       background: none;
       border: 1px solid var(--border-light);
       color: var(--text-muted);
-      width: 32px; height: 32px;
+      width: 32px;
+      height: 32px;
       border-radius: 6px;
       cursor: none;
       font-size: 1rem;
@@ -685,12 +898,17 @@
       justify-content: center;
       transition: all 0.2s;
     }
-    .modal-close:hover { border-color: var(--text-mid); color: var(--text); }
+
+    .modal-close:hover {
+      border-color: var(--text-mid);
+      color: var(--text);
+    }
 
     /* toast */
     .toast {
       position: fixed;
-      bottom: 2rem; left: 50%;
+      bottom: 2rem;
+      left: 50%;
       transform: translateX(-50%) translateY(20px);
       background: var(--accent);
       color: #080808;
@@ -703,359 +921,724 @@
       transition: all 0.3s;
       z-index: 2000;
     }
-    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ─── EDUCATION ─────────────────────────────── */
+    #education {
+      padding: 6rem 3rem;
+    }
+
+    .edu-header {
+      margin-bottom: 3.5rem;
+    }
+
+    .edu-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+
+    .edu-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .edu-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 3px;
+      height: 100%;
+      background: var(--accent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .edu-card:hover {
+      border-color: var(--accent-border);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+    }
+
+    .edu-card:hover::before {
+      opacity: 1;
+    }
+
+    .edu-card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: var(--accent-dim);
+      border: 1px solid var(--accent-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .edu-card-icon svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent);
+    }
+
+    .edu-type {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .edu-degree {
+      font-weight: 700;
+      font-size: 1.05rem;
+      line-height: 1.3;
+      margin-bottom: 0.35rem;
+    }
+
+    .edu-institution {
+      font-size: 0.88rem;
+      color: var(--text-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .edu-period {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .edu-period::before {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 1px;
+      background: var(--border-light);
+    }
+
+    /* Certifications row */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-top: 1.25rem;
+    }
+
+    .cert-item {
+      padding: 1rem 1.1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .cert-item:hover {
+      border-color: var(--accent-border);
+      background: var(--bg-card-hover);
+    }
+
+    .cert-icon {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cert-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-bottom: 0.25rem;
+    }
+
+    .cert-issuer {
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
 
     /* ─── RESPONSIVE ────────────────────────────── */
     @media (max-width: 900px) {
-      nav { padding: 1rem 1.5rem; }
-      .nav-links { display: none; }
-      #hero { padding: 7rem 1.5rem 4rem; }
-      section { padding: 4rem 1.5rem; }
-      #about { grid-template-columns: 1fr; gap: 3rem; }
-      .projects-grid { grid-template-columns: 1fr; }
-      .project-card:first-child { grid-column: span 1; }
-      footer { padding: 1.5rem; flex-direction: column; gap: 1rem; text-align: center; }
-      .section-divider { margin: 0 1.5rem; width: calc(100% - 3rem); }
+      nav {
+        padding: 1rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      #hero {
+        padding: 7rem 1.5rem 4rem;
+      }
+
+      section {
+        padding: 4rem 1.5rem;
+      }
+
+      #about {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card:first-child {
+        grid-column: span 1;
+      }
+
+      .edu-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .section-divider {
+        margin: 0 1.5rem;
+        width: calc(100% - 3rem);
+      }
     }
   </style>
 </head>
+
 <body>
 
-<!-- Custom cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<!-- ─── NAVBAR ─────────────────────────────────────────── -->
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="logo-badge">FGC</div>
-    Felipe G.
-  </a>
+  <!-- ─── NAVBAR ─────────────────────────────────────────── -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="logo-badge">FGC</div>
+      Felipe G.
+    </a>
 
-  <ul class="nav-links">
-    <li><a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
-    <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
-    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
-  </ul>
+    <ul class="nav-links">
+      <li><a href="#about" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+      <li><a href="#projects" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
+      <li><a href="#education" data-es="Educación" data-en="Education">Educación</a></li>
+      <li><a href="#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+    </ul>
 
-  <div class="nav-right">
-    <div class="nav-social">
-      <a href="https://www.linkedin.com/in/felipeguzman-chaves" target="_blank" title="LinkedIn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      </a>
-      <a href="https://github.com/PipeG8" target="_blank" title="GitHub">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      </a>
-      <a href="mailto:felipeguzmanchaves@gmail.com" title="Email">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      </a>
+    <div class="nav-right">
+      <div class="nav-social">
+        <a href="https://www.linkedin.com/in/felipe-guzman-chaves" target="_blank" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+            <rect x="2" y="9" width="4" height="12" />
+            <circle cx="4" cy="4" r="2" />
+          </svg>
+        </a>
+        <a href="https://github.com/PipeG8" target="_blank" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+          </svg>
+        </a>
+        <a href="mailto:felipeguzmanchaves@gmail.com" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+        </a>
+      </div>
+      <button class="lang-toggle" id="langToggle">EN</button>
     </div>
-    <button class="lang-toggle" id="langToggle">EN</button>
-  </div>
-</nav>
+  </nav>
 
-<!-- ─── HERO ───────────────────────────────────────────── -->
-<section id="hero">
-  <div class="hero-grid-bg"></div>
-  <div class="hero-glow"></div>
+  <!-- ─── HERO ───────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
 
-  <div class="badge-open">
-    <div class="badge-dot"></div>
-    <span data-es="Disponible para oportunidades" data-en="Open to opportunities">Disponible para oportunidades</span>
-  </div>
+    <div class="badge-open">
+      <div class="badge-dot"></div>
+      <span data-es="Disponible para oportunidades" data-en="Open to opportunities">Disponible para oportunidades</span>
+    </div>
 
-  <h1 class="hero-name">
-    Felipe<br>Guzman<br><span>Chaves</span>
-  </h1>
+    <h1 class="hero-name">
+      Felipe<br>Guzman<br><span>Chaves</span>
+    </h1>
 
-  <p class="hero-subtitle" data-es="Científico de Datos | Ingeniero Químico | Python · SQL · Power BI" data-en="Data Scientist | Chemical Engineer | Python · SQL · Power BI">
-    Científico de Datos | Ingeniero Químico | Python · SQL · Power BI
-  </p>
-
-  <p class="hero-desc" data-es="Transformando datos complejos en decisiones estratégicas. Combino visión de negocio, pensamiento analítico y automatización de procesos para generar valor tangible." data-en="Transforming complex data into strategic decisions. I combine business vision, analytical thinking, and process automation to generate tangible value.">
-    Transformando datos complejos en decisiones estratégicas. Combino visión de negocio, pensamiento analítico y automatización de procesos para generar valor tangible.
-  </p>
-
-  <div class="hero-ctas">
-    <a href="#projects" class="btn-primary" data-es="Ver Proyectos →" data-en="View Projects →">Ver Proyectos →</a>
-    <a href="Profile.pdf" class="btn-outline" target="_blank" data-es="⬇ Descargar CV" data-en="⬇ Download CV">⬇ Descargar CV</a>
-  </div>
-
-  <div class="hero-scroll">
-    <div class="scroll-line"></div>
-    <span data-es="Scroll para explorar" data-en="Scroll to explore">Scroll para explorar</span>
-  </div>
-</section>
-
-<div class="section-divider"></div>
-
-<!-- ─── ABOUT ──────────────────────────────────────────── -->
-<section id="about">
-  <!-- Left: About + Skills -->
-  <div class="about-left">
-    <p class="section-label reveal" data-es="// sobre mí" data-en="// about me">// sobre mí</p>
-    <h2 class="section-title reveal reveal-delay-1" data-es="Datos + Ingeniería" data-en="Data + Engineering">Datos + Ingeniería</h2>
-    <p class="about-text reveal reveal-delay-2" data-es="Ingeniero Químico y Científico de Datos con experiencia en operaciones, analítica aplicada y automatización. Manejo herramientas como Python, SQL, Power BI y Excel avanzado para extraer, transformar y visualizar información que impulsa la toma de decisiones. Nivel B2 de inglés y fuerte orientación a la mejora continua." data-en="Chemical Engineer and Data Scientist with experience in operations, applied analytics, and automation. I use Python, SQL, Power BI, and advanced Excel to extract, transform, and visualize information that drives decision-making. B2 English level with a strong focus on continuous improvement.">
-      Ingeniero Químico y Científico de Datos con experiencia en operaciones, analítica aplicada y automatización. Manejo herramientas como Python, SQL, Power BI y Excel avanzado para extraer, transformar y visualizar información que impulsa la toma de decisiones. Nivel B2 de inglés y fuerte orientación a la mejora continua.
+    <p class="hero-subtitle" data-es="Científico de Datos | Ingeniero Químico | Python · SQL · Power BI"
+      data-en="Data Scientist | Chemical Engineer | Python · SQL · Power BI">
+      Científico de Datos | Ingeniero Químico | Python · SQL · Power BI
     </p>
 
-    <div class="skills-grid reveal reveal-delay-3">
-      <div class="skill-item"><div class="skill-dot"></div>Python</div>
-      <div class="skill-item"><div class="skill-dot"></div>SQL</div>
-      <div class="skill-item"><div class="skill-dot"></div>Power BI</div>
-      <div class="skill-item"><div class="skill-dot"></div>DAX</div>
-      <div class="skill-item"><div class="skill-dot"></div>Power Query</div>
-      <div class="skill-item"><div class="skill-dot"></div>Pandas</div>
-      <div class="skill-item"><div class="skill-dot"></div>Excel Avanzado</div>
-      <div class="skill-item"><div class="skill-dot"></div>ASPEN Plus</div>
+    <p class="hero-desc"
+      data-es="Transformando datos complejos en decisiones estratégicas. Combino visión de negocio, pensamiento analítico y automatización de procesos para generar valor tangible."
+      data-en="Transforming complex data into strategic decisions. I combine business vision, analytical thinking, and process automation to generate tangible value.">
+      Transformando datos complejos en decisiones estratégicas. Combino visión de negocio, pensamiento analítico y
+      automatización de procesos para generar valor tangible.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#projects" class="btn-primary" data-es="Ver Proyectos →" data-en="View Projects →">Ver Proyectos →</a>
+      <a href="Profile.pdf" class="btn-outline" target="_blank" data-es="⬇ Descargar CV" data-en="⬇ Download CV">⬇
+        Descargar CV</a>
     </div>
-  </div>
 
-  <!-- Right: Experience -->
-  <div class="about-right">
-    <p class="section-label reveal" data-es="// experiencia" data-en="// experience">// experiencia</p>
-    <div class="exp-timeline">
-      <div class="exp-item reveal reveal-delay-1">
-        <div class="exp-period">Ene 2024 — Ene 2025</div>
-        <div class="exp-role" data-es="Analista de Datos & Jefe de Producción" data-en="Data Analyst & Production Manager">Analista de Datos & Jefe de Producción</div>
-        <div class="exp-company">Arla SAS</div>
-        <div class="exp-desc" data-es="Implementé sistema de tiempos y movimientos, actualicé ERP, generé dashboards en Power BI para alta gerencia y lideré equipo de 6-8 operarios." data-en="Implemented a time-and-motion system, updated ERP, built Power BI dashboards for senior management, and led a team of 6–8 operators.">Implementé sistema de tiempos y movimientos, actualicé ERP, generé dashboards en Power BI para alta gerencia y lideré equipo de 6–8 operarios.</div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-2">
-        <div class="exp-period">Ago 2021 — Ago 2022</div>
-        <div class="exp-role" data-es="Analista de Datos" data-en="Data Analyst">Analista de Datos</div>
-        <div class="exp-company">CEN&T Ingenieros Consultores SAS</div>
-        <div class="exp-desc" data-es="Análisis de datos en proyectos Oil & Gas, diseño de plantas de tratamiento de gas, control de proyectos con MS Project y automatización de documentación." data-en="Data analysis in Oil & Gas projects, gas treatment plant design, project control with MS Project, and documentation automation.">Análisis de datos en proyectos Oil & Gas, diseño de plantas de tratamiento de gas, control de proyectos con MS Project y automatización de documentación.</div>
-      </div>
-
-      <div class="exp-item reveal reveal-delay-3">
-        <div class="exp-period">Ago 2019 — Ago 2021</div>
-        <div class="exp-role" data-es="Profesor de Química" data-en="Chemistry Teacher">Profesor de Química</div>
-        <div class="exp-company">Better Human Education</div>
-        <div class="exp-desc" data-es="Desarrollé estrategias digitales de enseñanza y coordiné grupos, fortaleciendo habilidades de liderazgo y comunicación." data-en="Developed digital teaching strategies and coordinated groups, strengthening leadership and communication skills.">Desarrollé estrategias digitales de enseñanza y coordiné grupos, fortaleciendo habilidades de liderazgo y comunicación.</div>
-      </div>
-
-
+    <div class="hero-scroll">
+      <div class="scroll-line"></div>
+      <span data-es="Scroll para explorar" data-en="Scroll to explore">Scroll para explorar</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-<!-- ─── PROJECTS ───────────────────────────────────────── -->
-<section id="projects">
-  <div class="projects-header">
-    <div>
-      <p class="section-label reveal" data-es="// proyectos destacados" data-en="// featured projects">// proyectos destacados</p>
-      <h2 class="section-title reveal reveal-delay-1" data-es="Lo que construyo" data-en="What I build">Lo que construyo</h2>
-    </div>
-    <a href="https://github.com/PipeG8" target="_blank" class="btn-outline reveal" style="font-size:0.78rem; padding: 0.6rem 1.2rem;" data-es="Ver GitHub →" data-en="View GitHub →">Ver GitHub →</a>
-  </div>
+  <!-- ─── ABOUT ──────────────────────────────────────────── -->
+  <section id="about">
+    <!-- Left: About + Skills -->
+    <div class="about-left">
+      <p class="section-label reveal" data-es="// sobre mí" data-en="// about me">// sobre mí</p>
+      <h2 class="section-title reveal reveal-delay-1" data-es="Datos + Ingeniería" data-en="Data + Engineering">Datos +
+        Ingeniería</h2>
+      <p class="about-text reveal reveal-delay-2"
+        data-es="Ingeniero Químico y Científico de Datos con experiencia en operaciones, analítica aplicada y automatización. Manejo herramientas como Python, SQL, Power BI y Excel avanzado para extraer, transformar y visualizar información que impulsa la toma de decisiones. Nivel B2 de inglés y fuerte orientación a la mejora continua."
+        data-en="Chemical Engineer and Data Scientist with experience in operations, applied analytics, and automation. I use Python, SQL, Power BI, and advanced Excel to extract, transform, and visualize information that drives decision-making. B2 English level with a strong focus on continuous improvement.">
+        Ingeniero Químico y Científico de Datos con experiencia en operaciones, analítica aplicada y automatización.
+        Manejo herramientas como Python, SQL, Power BI y Excel avanzado para extraer, transformar y visualizar
+        información que impulsa la toma de decisiones. Nivel B2 de inglés y fuerte orientación a la mejora continua.
+      </p>
 
-  <div class="projects-grid">
-    <!-- Project 1 – Featured -->
-    <div class="project-card reveal">
-      <div class="project-visual pv-1">
-        <div class="project-visual-inner">
-          <div class="pv-chart">
-            <div class="bar" style="height:40%"></div>
-            <div class="bar" style="height:65%"></div>
-            <div class="bar" style="height:55%"></div>
-            <div class="bar" style="height:80%"></div>
-            <div class="bar" style="height:45%"></div>
-            <div class="bar" style="height:90%"></div>
-            <div class="bar" style="height:70%"></div>
-            <div class="bar" style="height:60%"></div>
-            <div class="bar" style="height:85%"></div>
-            <div class="bar" style="height:75%"></div>
-            <div class="bar" style="height:50%"></div>
-            <div class="bar" style="height:95%"></div>
-          </div>
+      <div class="skills-grid reveal reveal-delay-3">
+        <div class="skill-item">
+          <div class="skill-dot"></div>Python
         </div>
-        <div class="project-badge" data-es="Proyecto Destacado" data-en="Featured Project">⭐ Proyecto Destacado</div>
-      </div>
-      <div class="project-body">
-        <div class="project-title">Production Performance Analysis 2023 vs 2024</div>
-        <div class="project-desc" data-es="Dashboard en Power BI para comparar desempeño de producción entre años, analizando tendencias, variaciones mensuales, estacionalidad y KPIs." data-en="Power BI dashboard comparing production performance across years, analyzing trends, monthly variations, seasonality, and KPIs.">Dashboard en Power BI para comparar desempeño de producción entre años, analizando tendencias, variaciones mensuales, estacionalidad y KPIs.</div>
-        <div class="project-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Power Query</span>
+        <div class="skill-item">
+          <div class="skill-dot"></div>SQL
         </div>
-        <a href="https://github.com/PipeG8" class="project-link" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span>
-        </a>
+        <div class="skill-item">
+          <div class="skill-dot"></div>Power BI
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>DAX
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>Power Query
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>Pandas
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>Excel Avanzado
+        </div>
+        <div class="skill-item">
+          <div class="skill-dot"></div>ASPEN Plus
+        </div>
       </div>
     </div>
 
-    <!-- Project 2 -->
-    <div class="project-card reveal reveal-delay-1">
-      <div class="project-visual pv-2">
-        <div class="project-visual-inner">
-          <div class="pv-lines">
-            <svg viewBox="0 0 200 120" fill="none">
-              <polyline points="10,100 40,70 70,85 100,40 130,55 160,20 190,35" stroke="#c8f542" stroke-width="2" fill="none"/>
-              <polyline points="10,110 40,90 70,95 100,70 130,75 160,50 190,60" stroke="#c8f542" stroke-width="1" fill="none" opacity="0.4"/>
-              <circle cx="100" cy="40" r="4" fill="#c8f542"/>
-              <circle cx="160" cy="20" r="4" fill="#c8f542"/>
-            </svg>
-          </div>
+    <!-- Right: Experience -->
+    <div class="about-right">
+      <p class="section-label reveal" data-es="// experiencia" data-en="// experience">// experiencia</p>
+      <div class="exp-timeline">
+        <div class="exp-item reveal reveal-delay-1">
+          <div class="exp-period">Ene 2024 — Ene 2025</div>
+          <div class="exp-role" data-es="Analista de Datos & Jefe de Producción"
+            data-en="Data Analyst & Production Manager">Analista de Datos & Jefe de Producción</div>
+          <div class="exp-company">Arla SAS</div>
+          <div class="exp-desc"
+            data-es="Implementé sistema de tiempos y movimientos, actualicé ERP, generé dashboards en Power BI para alta gerencia y lideré equipo de 6-8 operarios."
+            data-en="Implemented a time-and-motion system, updated ERP, built Power BI dashboards for senior management, and led a team of 6–8 operators.">
+            Implementé sistema de tiempos y movimientos, actualicé ERP, generé dashboards en Power BI para alta gerencia
+            y lideré equipo de 6–8 operarios.</div>
         </div>
-        <div class="project-badge" data-es="Business Analytics" data-en="Business Analytics">Business Analytics</div>
-      </div>
-      <div class="project-body">
-        <div class="project-title">Business Performance Dashboard</div>
-        <div class="project-desc" data-es="Dashboards ejecutivos para monitorear indicadores de negocio, desempeño mensual y comparativos históricos." data-en="Executive dashboards to monitor business KPIs, monthly performance, and historical comparisons.">Dashboards ejecutivos para monitorear indicadores de negocio, desempeño mensual y comparativos históricos.</div>
-        <div class="project-tags">
-          <span class="tag">Power BI</span>
-          <span class="tag">DAX</span>
-          <span class="tag">Excel</span>
+
+        <div class="exp-item reveal reveal-delay-2">
+          <div class="exp-period">Ago 2021 — Ago 2022</div>
+          <div class="exp-role" data-es="Analista de Datos" data-en="Data Analyst">Analista de Datos</div>
+          <div class="exp-company">CEN&T Ingenieros Consultores SAS</div>
+          <div class="exp-desc"
+            data-es="Análisis de datos en proyectos Oil & Gas, diseño de plantas de tratamiento de gas, control de proyectos con MS Project y automatización de documentación."
+            data-en="Data analysis in Oil & Gas projects, gas treatment plant design, project control with MS Project, and documentation automation.">
+            Análisis de datos en proyectos Oil & Gas, diseño de plantas de tratamiento de gas, control de proyectos con
+            MS Project y automatización de documentación.</div>
         </div>
-        <a href="https://github.com/PipeG8" class="project-link" target="_blank">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-          <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span>
-        </a>
+
+        <div class="exp-item reveal reveal-delay-3">
+          <div class="exp-period">Ago 2019 — Ago 2021</div>
+          <div class="exp-role" data-es="Profesor de Química" data-en="Chemistry Teacher">Profesor de Química</div>
+          <div class="exp-company">Better Human Education</div>
+          <div class="exp-desc"
+            data-es="Desarrollé estrategias digitales de enseñanza y coordiné grupos, fortaleciendo habilidades de liderazgo y comunicación."
+            data-en="Developed digital teaching strategies and coordinated groups, strengthening leadership and communication skills.">
+            Desarrollé estrategias digitales de enseñanza y coordiné grupos, fortaleciendo habilidades de liderazgo y
+            comunicación.</div>
+        </div>
+
+
       </div>
     </div>
+  </section>
 
-    <!-- Project 3 -->
-    <div class="project-card reveal reveal-delay-2" style="grid-column: span 3;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100%;">
-        <div class="project-visual pv-3" style="height: auto; min-height: 160px;">
-          <div class="project-visual-inner" style="height:100%">
-            <div class="pv-hex">
-              <div class="hex-cell" style="opacity:0.8"></div>
-              <div class="hex-cell" style="opacity:0.4"></div>
-              <div class="hex-cell" style="opacity:0.6"></div>
-              <div class="hex-cell" style="opacity:0.9"></div>
-              <div class="hex-cell" style="opacity:0.3"></div>
-              <div class="hex-cell" style="opacity:0.7"></div>
-              <div class="hex-cell" style="opacity:0.5"></div>
-              <div class="hex-cell" style="opacity:0.8"></div>
-              <div class="hex-cell" style="opacity:0.3"></div>
-              <div class="hex-cell" style="opacity:0.6"></div>
-              <div class="hex-cell" style="opacity:0.9"></div>
-              <div class="hex-cell" style="opacity:0.4"></div>
+  <div class="section-divider"></div>
+
+  <!-- ─── PROJECTS ───────────────────────────────────────── -->
+  <section id="projects">
+    <div class="projects-header">
+      <div>
+        <p class="section-label reveal" data-es="// proyectos destacados" data-en="// featured projects">// proyectos
+          destacados</p>
+        <h2 class="section-title reveal reveal-delay-1" data-es="Lo que construyo" data-en="What I build">Lo que
+          construyo</h2>
+      </div>
+      <a href="https://github.com/PipeG8" target="_blank" class="btn-outline reveal"
+        style="font-size:0.78rem; padding: 0.6rem 1.2rem;" data-es="Ver GitHub →" data-en="View GitHub →">Ver GitHub
+        →</a>
+    </div>
+
+    <div class="projects-grid">
+      <!-- Project 1 – Featured -->
+      <div class="project-card reveal">
+        <div class="project-visual pv-1">
+          <div class="project-visual-inner">
+            <div class="pv-chart">
+              <div class="bar" style="height:40%"></div>
+              <div class="bar" style="height:65%"></div>
+              <div class="bar" style="height:55%"></div>
+              <div class="bar" style="height:80%"></div>
+              <div class="bar" style="height:45%"></div>
+              <div class="bar" style="height:90%"></div>
+              <div class="bar" style="height:70%"></div>
+              <div class="bar" style="height:60%"></div>
+              <div class="bar" style="height:85%"></div>
+              <div class="bar" style="height:75%"></div>
+              <div class="bar" style="height:50%"></div>
+              <div class="bar" style="height:95%"></div>
             </div>
           </div>
-          <div class="project-badge" data-es="Automatización" data-en="Automation">Automatización</div>
+          <div class="project-badge" data-es="Proyecto Destacado" data-en="Featured Project">⭐ Proyecto Destacado</div>
         </div>
-        <div class="project-body" style="display:flex; flex-direction:column; justify-content:center;">
-          <div class="project-title">Process Automation & Data Analysis</div>
-          <div class="project-desc" data-es="Automatización de procesos operativos con Python y SQL para optimizar tiempos, limpiar datos y generar reportes automáticos. Reducción de hasta 3h de trabajo manual diario." data-en="Operational process automation with Python and SQL to optimize processing times, clean data, and generate automated reports. Reduction of up to 3 hours of manual work per day.">Automatización de procesos operativos con Python y SQL para optimizar tiempos, limpiar datos y generar reportes automáticos. Reducción de hasta 3h de trabajo manual diario.</div>
+        <div class="project-body">
+          <div class="project-title">Production Performance Analysis 2023 vs 2024</div>
+          <div class="project-desc"
+            data-es="Dashboard en Power BI para comparar desempeño de producción entre años, analizando tendencias, variaciones mensuales, estacionalidad y KPIs."
+            data-en="Power BI dashboard comparing production performance across years, analyzing trends, monthly variations, seasonality, and KPIs.">
+            Dashboard en Power BI para comparar desempeño de producción entre años, analizando tendencias, variaciones
+            mensuales, estacionalidad y KPIs.</div>
           <div class="project-tags">
-            <span class="tag">Python</span>
-            <span class="tag">SQL</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">Excel</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Power Query</span>
           </div>
           <a href="https://github.com/PipeG8" class="project-link" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
             <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span>
           </a>
         </div>
       </div>
+
+      <!-- Project 2 -->
+      <div class="project-card reveal reveal-delay-1">
+        <div class="project-visual pv-2">
+          <div class="project-visual-inner">
+            <div class="pv-lines">
+              <svg viewBox="0 0 200 120" fill="none">
+                <polyline points="10,100 40,70 70,85 100,40 130,55 160,20 190,35" stroke="#c8f542" stroke-width="2"
+                  fill="none" />
+                <polyline points="10,110 40,90 70,95 100,70 130,75 160,50 190,60" stroke="#c8f542" stroke-width="1"
+                  fill="none" opacity="0.4" />
+                <circle cx="100" cy="40" r="4" fill="#c8f542" />
+                <circle cx="160" cy="20" r="4" fill="#c8f542" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-badge" data-es="Business Analytics" data-en="Business Analytics">Business Analytics</div>
+        </div>
+        <div class="project-body">
+          <div class="project-title">Business Performance Dashboard</div>
+          <div class="project-desc"
+            data-es="Dashboards ejecutivos para monitorear indicadores de negocio, desempeño mensual y comparativos históricos."
+            data-en="Executive dashboards to monitor business KPIs, monthly performance, and historical comparisons.">
+            Dashboards ejecutivos para monitorear indicadores de negocio, desempeño mensual y comparativos históricos.
+          </div>
+          <div class="project-tags">
+            <span class="tag">Power BI</span>
+            <span class="tag">DAX</span>
+            <span class="tag">Excel</span>
+          </div>
+          <a href="https://github.com/PipeG8" class="project-link" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card reveal reveal-delay-2" style="grid-column: span 3;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; height: 100%;">
+          <div class="project-visual pv-3" style="height: auto; min-height: 160px;">
+            <div class="project-visual-inner" style="height:100%">
+              <div class="pv-hex">
+                <div class="hex-cell" style="opacity:0.8"></div>
+                <div class="hex-cell" style="opacity:0.4"></div>
+                <div class="hex-cell" style="opacity:0.6"></div>
+                <div class="hex-cell" style="opacity:0.9"></div>
+                <div class="hex-cell" style="opacity:0.3"></div>
+                <div class="hex-cell" style="opacity:0.7"></div>
+                <div class="hex-cell" style="opacity:0.5"></div>
+                <div class="hex-cell" style="opacity:0.8"></div>
+                <div class="hex-cell" style="opacity:0.3"></div>
+                <div class="hex-cell" style="opacity:0.6"></div>
+                <div class="hex-cell" style="opacity:0.9"></div>
+                <div class="hex-cell" style="opacity:0.4"></div>
+              </div>
+            </div>
+            <div class="project-badge" data-es="Automatización" data-en="Automation">Automatización</div>
+          </div>
+          <div class="project-body" style="display:flex; flex-direction:column; justify-content:center;">
+            <div class="project-title">Process Automation & Data Analysis</div>
+            <div class="project-desc"
+              data-es="Automatización de procesos operativos con Python y SQL para optimizar tiempos, limpiar datos y generar reportes automáticos. Reducción de hasta 3h de trabajo manual diario."
+              data-en="Operational process automation with Python and SQL to optimize processing times, clean data, and generate automated reports. Reduction of up to 3 hours of manual work per day.">
+              Automatización de procesos operativos con Python y SQL para optimizar tiempos, limpiar datos y generar
+              reportes automáticos. Reducción de hasta 3h de trabajo manual diario.</div>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">Excel</span>
+            </div>
+            <a href="https://github.com/PipeG8" class="project-link" target="_blank">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+              <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<div class="section-divider"></div>
+  <div class="section-divider"></div>
 
-<!-- ─── CONTACT ────────────────────────────────────────── -->
-<section id="contact">
-  <p class="section-label reveal" data-es="// conectemos" data-en="// let's connect">// conectemos</p>
-  <h2 class="section-title reveal reveal-delay-1" data-es="¿Hablamos?" data-en="Let's Talk?">¿Hablamos?</h2>
-  <p class="contact-subtitle reveal reveal-delay-2" data-es="¿Interesado en colaborar o discutir sobre datos y analítica? Encuéntrame en mis redes." data-en="Interested in collaborating or discussing data and analytics? Find me on my networks.">¿Interesado en colaborar o discutir sobre datos y analítica? Encuéntrame en mis redes.</p>
+  <!-- ─── EDUCATION ─────────────────────────────────────── -->
+  <section id="education">
+    <div class="edu-header">
+      <p class="section-label reveal" data-es="// formación académica" data-en="// academic background">// formación
+        académica</p>
+      <h2 class="section-title reveal reveal-delay-1" data-es="Educación & Certificaciones"
+        data-en="Education & Certifications">Educación & Certificaciones</h2>
+    </div>
 
-  <div class="contact-cards reveal reveal-delay-3">
-    <a href="https://www.linkedin.com/in/felipeguzman-chaves" target="_blank" class="contact-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-      <div>
-        <span class="contact-label">LinkedIn</span>
-        <span class="contact-value" data-es="Conecta profesionalmente" data-en="Connect professionally">Conecta profesionalmente</span>
+    <!-- Degree cards -->
+    <div class="edu-grid reveal reveal-delay-2">
+      <!-- Universidad de América -->
+      <div class="edu-card">
+        <div class="edu-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+          </svg>
+        </div>
+        <div class="edu-type" data-es="Grado Universitario" data-en="University Degree">Grado Universitario</div>
+        <div class="edu-degree" data-es="Ingeniería Química" data-en="Chemical Engineering">Ingeniería Química</div>
+        <div class="edu-institution">Universidad de América · Bogotá, Colombia</div>
+        <div class="edu-period">2016 — 2022</div>
       </div>
-    </a>
 
-    <a href="https://github.com/PipeG8" target="_blank" class="contact-card">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-      <div>
-        <span class="contact-label">GitHub</span>
-        <span class="contact-value" data-es="Explora mi código" data-en="Explore my code">Explora mi código</span>
+      <!-- Inglés B2 -->
+      <div class="edu-card">
+        <div class="edu-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="2" y1="12" x2="22" y2="12" />
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+          </svg>
+        </div>
+        <div class="edu-type" data-es="Idiomas" data-en="Languages">Idiomas</div>
+        <div class="edu-degree" data-es="Inglés Nivel B2" data-en="English Level B2">Inglés Nivel B2</div>
+        <div class="edu-institution" data-es="Marco Común Europeo de Referencia · Upper Intermediate"
+          data-en="Common European Framework · Upper Intermediate">Marco Común Europeo de Referencia · Upper
+          Intermediate</div>
+        <div class="edu-period" data-es="Certificado vigente" data-en="Active certification">Certificado vigente</div>
       </div>
-    </a>
+    </div>
 
-    <a href="#" class="contact-card" id="emailCard">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <div>
-        <span class="contact-label">Gmail</span>
-        <span class="contact-value">felipeguzmanchaves@gmail.com</span>
+    <!-- Certifications -->
+    <div style="margin-top: 2.5rem;">
+      <p class="section-label reveal" style="margin-bottom: 1.25rem;" data-es="// certificaciones"
+        data-en="// certifications">// certificaciones</p>
+      <div class="cert-grid reveal reveal-delay-1">
+        <div class="cert-item">
+          <div class="cert-icon">🐍</div>
+          <div class="cert-name" data-es="Introducción a Python para Ingeniería Química"
+            data-en="Introduction to Python for Chemical Engineering">Introducción a Python para Ingeniería Química
+          </div>
+          <div class="cert-issuer" data-es="Certificación completada" data-en="Certification completed">Certificación
+            completada</div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">⚗️</div>
+          <div class="cert-name" data-es="ASPEN Plus Intermediate Process Learning"
+            data-en="ASPEN Plus Intermediate Process Learning">ASPEN Plus Intermediate Process Learning</div>
+          <div class="cert-issuer" data-es="Simulación de procesos" data-en="Process simulation">Simulación de procesos
+          </div>
+        </div>
+        <div class="cert-item">
+          <div class="cert-icon">📊</div>
+          <div class="cert-name" data-es="Excel Intermedio" data-en="Intermediate Excel">Excel Intermedio</div>
+          <div class="cert-issuer" data-es="Análisis y visualización de datos" data-en="Data analysis & visualization">
+            Análisis y visualización de datos</div>
+        </div>
       </div>
-    </a>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!-- ─── FOOTER ─────────────────────────────────────────── -->
-<footer>
-  <div class="nav-logo" style="text-decoration:none; display:flex; align-items:center; gap:0.6rem;">
-    <div class="logo-badge">FGC</div>
-    <span style="font-size:0.85rem; color: var(--text-muted);">Felipe Guzman Chaves</span>
-  </div>
-  <p class="footer-copy">© 2026 Felipe Guzman Chaves. Todos los derechos reservados.</p>
-</footer>
+  <div class="section-divider"></div>
 
-<!-- Toast -->
-<div class="toast" id="toast" data-es="Email copiado al portapapeles" data-en="Email copied to clipboard">Email copiado al portapapeles</div>
+  <!-- ─── CONTACT ────────────────────────────────────────── -->
+  <section id="contact">
+    <p class="section-label reveal" data-es="// conectemos" data-en="// let's connect">// conectemos</p>
+    <h2 class="section-title reveal reveal-delay-1" data-es="¿Hablamos?" data-en="Let's Talk?">¿Hablamos?</h2>
+    <p class="contact-subtitle reveal reveal-delay-2"
+      data-es="¿Interesado en colaborar o discutir sobre datos y analítica? Encuéntrame en mis redes."
+      data-en="Interested in collaborating or discussing data and analytics? Find me on my networks.">¿Interesado en
+      colaborar o discutir sobre datos y analítica? Encuéntrame en mis redes.</p>
 
-<script>
-  // ── CURSOR
-  const cursor = document.getElementById('cursor');
-  const ring = document.getElementById('cursorRing');
-  let mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
-  (function animateRing() {
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
-    requestAnimationFrame(animateRing);
-  })();
-  document.querySelectorAll('a, button, .project-card, .contact-card, .skill-item').forEach(el => {
-    el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '52px'; ring.style.height = '52px'; });
-    el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '36px'; ring.style.height = '36px'; });
-  });
+    <div class="contact-cards reveal reveal-delay-3">
+      <a href="https://www.linkedin.com/in/felipe-guzman-chaves" target="_blank" class="contact-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+        <div>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value" data-es="Conecta profesionalmente" data-en="Connect professionally">Conecta
+            profesionalmente</span>
+        </div>
+      </a>
 
-  // ── SCROLL REVEAL
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
+      <a href="https://github.com/PipeG8" target="_blank" class="contact-card">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path
+            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+        </svg>
+        <div>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value" data-es="Explora mi código" data-en="Explore my code">Explora mi código</span>
+        </div>
+      </a>
 
-  // ── LANGUAGE TOGGLE
-  let lang = 'es';
-  const langBtn = document.getElementById('langToggle');
-  langBtn.addEventListener('click', () => {
-    lang = lang === 'es' ? 'en' : 'es';
-    langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
-    document.querySelectorAll('[data-es]').forEach(el => {
-      el.textContent = el.dataset[lang];
+      <a href="#" class="contact-card" id="emailCard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        <div>
+          <span class="contact-label">Gmail</span>
+          <span class="contact-value">felipeguzmanchaves@gmail.com</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────── -->
+  <footer>
+    <div class="nav-logo" style="text-decoration:none; display:flex; align-items:center; gap:0.6rem;">
+      <div class="logo-badge">FGC</div>
+      <span style="font-size:0.85rem; color: var(--text-muted);">Felipe Guzman Chaves</span>
+    </div>
+    <p class="footer-copy">© 2026 Felipe Guzman Chaves. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" data-es="Email copiado al portapapeles" data-en="Email copied to clipboard">Email
+    copiado al portapapeles</div>
+
+  <script>
+    // ── CURSOR
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
+    (function animateRing() {
+      rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(animateRing);
+    })();
+    document.querySelectorAll('a, button, .project-card, .contact-card, .skill-item').forEach(el => {
+      el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; ring.style.width = '52px'; ring.style.height = '52px'; });
+      el.addEventListener('mouseleave', () => { cursor.style.width = '10px'; cursor.style.height = '10px'; ring.style.width = '36px'; ring.style.height = '36px'; });
     });
-  });
 
-  // ── EMAIL COPY
-  document.getElementById('emailCard').addEventListener('click', e => {
-    e.preventDefault();
-    navigator.clipboard.writeText('felipeguzmanchaves@gmail.com').catch(() => {});
-    const toast = document.getElementById('toast');
-    toast.textContent = lang === 'es' ? 'Email copiado al portapapeles' : 'Email copied to clipboard';
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 2500);
-  });
+    // ── SCROLL REVEAL
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    reveals.forEach(el => observer.observe(el));
 
-  // ── NAVBAR scroll style
-  window.addEventListener('scroll', () => {
-    document.querySelector('nav').style.borderBottomColor = window.scrollY > 20 ? '#1e1e1e' : 'transparent';
-  });
-</script>
+    // ── LANGUAGE TOGGLE
+    let lang = 'es';
+    const langBtn = document.getElementById('langToggle');
+    langBtn.addEventListener('click', () => {
+      lang = lang === 'es' ? 'en' : 'es';
+      langBtn.textContent = lang === 'es' ? 'EN' : 'ES';
+      document.querySelectorAll('[data-es]').forEach(el => {
+        el.textContent = el.dataset[lang];
+      });
+    });
+
+    // ── EMAIL COPY
+    document.getElementById('emailCard').addEventListener('click', e => {
+      e.preventDefault();
+      navigator.clipboard.writeText('felipeguzmanchaves@gmail.com').catch(() => { });
+      const toast = document.getElementById('toast');
+      toast.textContent = lang === 'es' ? 'Email copiado al portapapeles' : 'Email copied to clipboard';
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2500);
+    });
+
+    // ── NAVBAR scroll style
+    window.addEventListener('scroll', () => {
+      document.querySelector('nav').style.borderBottomColor = window.scrollY > 20 ? '#1e1e1e' : 'transparent';
+    });
+  </script>
 </body>
+
 </html>
