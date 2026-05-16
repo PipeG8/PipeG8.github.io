@@ -1,0 +1,184 @@
+{
+  "personal": {
+    "name": "Felipe Guzman Chaves",
+    "title_es": "Científico de Datos | Ingeniero Químico",
+    "title_en": "Data Scientist | Chemical Engineer",
+    "location": "Bogotá, Colombia",
+    "email": "felipeguzmanchaves@gmail.com",
+    "phone": "+57 317 449 4055",
+    "english_level": "B2",
+    "linkedin": "https://www.linkedin.com/in/felipeguzman-chaves",
+    "github": "https://github.com/PipeG8",
+    "cv_file": "Profile.pdf",
+    "logo_initials": "FGC",
+    "status_es": "Disponible para oportunidades",
+    "status_en": "Open to opportunities"
+  },
+  "hero": {
+    "description_es": "Transformando datos complejos en decisiones estratégicas. Combino visión de negocio, pensamiento analítico y automatización de procesos para generar valor tangible.",
+    "description_en": "Transforming complex data into strategic decisions. I combine business vision, analytical thinking, and process automation to generate tangible value."
+  },
+  "about": {
+    "bio_es": "Ingeniero Químico y Científico de Datos con experiencia en operaciones, analítica aplicada y automatización. Manejo herramientas como Python, SQL, Power BI y Excel avanzado para extraer, transformar y visualizar información que impulsa la toma de decisiones. Nivel B2 de inglés y fuerte orientación a la mejora continua.",
+    "bio_en": "Chemical Engineer and Data Scientist with experience in operations, applied analytics, and automation. I use Python, SQL, Power BI, and advanced Excel to extract, transform, and visualize information that drives decision-making. B2 English level with a strong focus on continuous improvement."
+  },
+  "skills": [
+    "Python",
+    "SQL",
+    "Power BI",
+    "DAX",
+    "Power Query",
+    "Pandas",
+    "Excel Avanzado",
+    "ASPEN Plus"
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "period": "Ene 2024 — Ene 2025",
+      "role_es": "Analista de Datos & Jefe de Producción",
+      "role_en": "Data Analyst & Production Manager",
+      "company": "Arla SAS",
+      "location": "Bogotá",
+      "description_es": "Implementé sistema de tiempos y movimientos, actualicé ERP, generé dashboards en Power BI para alta gerencia y lideré equipo de 6–8 operarios.",
+      "description_en": "Implemented a time-and-motion system, updated ERP, built Power BI dashboards for senior management, and led a team of 6–8 operators.",
+      "highlights_es": [
+        "Sistema innovador de tiempos y movimientos",
+        "Actualización del sistema ERP",
+        "Dashboards estratégicos en Power BI",
+        "Liderazgo de equipo de 6-8 operarios",
+        "Formulación y costeo de productos de limpieza"
+      ],
+      "highlights_en": [
+        "Innovative time-and-motion system",
+        "ERP system update",
+        "Strategic Power BI dashboards",
+        "Leadership of 6-8 person team",
+        "Product formulation and cost analysis"
+      ]
+    },
+    {
+      "id": 2,
+      "period": "Ago 2021 — Ago 2022",
+      "role_es": "Analista de Datos",
+      "role_en": "Data Analyst",
+      "company": "CEN&T Ingenieros Consultores SAS",
+      "location": "Bogotá",
+      "description_es": "Análisis de datos en proyectos Oil & Gas, diseño de plantas de tratamiento de gas, control de proyectos con MS Project y automatización de documentación.",
+      "description_en": "Data analysis in Oil & Gas projects, gas treatment plant design, project control with MS Project, and documentation automation.",
+      "highlights_es": [
+        "Análisis de datos operativos y energéticos en Oil & Gas",
+        "Validación de diagramas BFD, PFD y P&ID",
+        "Control de proyectos con Microsoft Project",
+        "Automatización que redujo 3h diarias de trabajo operativo",
+        "Traducción técnica inglés–español"
+      ],
+      "highlights_en": [
+        "Operational and energy data analysis in Oil & Gas",
+        "Validation of BFD, PFD, and P&ID diagrams",
+        "Project control with Microsoft Project",
+        "Automation reducing 3 daily hours of operational work",
+        "Technical translation English–Spanish"
+      ]
+    },
+    {
+      "id": 3,
+      "period": "Ago 2019 — Ago 2021",
+      "role_es": "Profesor de Química",
+      "role_en": "Chemistry Teacher",
+      "company": "Better Human Education",
+      "location": "Bogotá",
+      "description_es": "Desarrollé estrategias digitales de enseñanza y coordiné grupos, fortaleciendo habilidades de liderazgo y comunicación.",
+      "description_en": "Developed digital teaching strategies and coordinated groups, strengthening leadership and communication skills.",
+      "highlights_es": [
+        "Estrategias digitales con herramientas Google y PowerPoint",
+        "Coordinación de grupos y liderazgo",
+        "Comunicación efectiva e identificación de habilidades"
+      ],
+      "highlights_en": [
+        "Digital strategies with Google tools and PowerPoint",
+        "Group coordination and leadership",
+        "Effective communication and skills identification"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree_es": "Ingeniería Química",
+      "degree_en": "Chemical Engineering",
+      "institution": "Universidad de América",
+      "location": "Bogotá, Colombia",
+      "period": "2016 — 2022"
+    }
+  ],
+  "certifications": [
+    "Introducción a Python para Ingeniería Química",
+    "ASPEN Plus Intermediate Process Learning",
+    "Excel Intermedio"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Production Performance Analysis 2023 vs 2024",
+      "category": "Power BI",
+      "featured": true,
+      "description_es": "Dashboard en Power BI para comparar desempeño de producción entre años, analizando tendencias, variaciones mensuales, estacionalidad y KPIs.",
+      "description_en": "Power BI dashboard comparing production performance across years, analyzing trends, monthly variations, seasonality, and KPIs.",
+      "technologies": ["Power BI", "DAX", "Power Query"],
+      "github_url": "https://github.com/PipeG8",
+      "visual_type": "bar_chart",
+      "visual_theme": "green-dark"
+    },
+    {
+      "id": 2,
+      "title": "Business Performance Dashboard",
+      "category": "Business Analytics",
+      "featured": false,
+      "description_es": "Dashboards ejecutivos para monitorear indicadores de negocio, desempeño mensual y comparativos históricos.",
+      "description_en": "Executive dashboards to monitor business KPIs, monthly performance, and historical comparisons.",
+      "technologies": ["Power BI", "DAX", "Excel"],
+      "github_url": "https://github.com/PipeG8",
+      "visual_type": "line_chart",
+      "visual_theme": "blue-dark"
+    },
+    {
+      "id": 3,
+      "title": "Process Automation & Data Analysis",
+      "category": "Automatización",
+      "featured": false,
+      "description_es": "Automatización de procesos operativos con Python y SQL para optimizar tiempos, limpiar datos y generar reportes automáticos. Reducción de hasta 3h de trabajo manual diario.",
+      "description_en": "Operational process automation with Python and SQL to optimize processing times, clean data, and generate automated reports. Reduction of up to 3 hours of manual work per day.",
+      "technologies": ["Python", "SQL", "Pandas", "Excel"],
+      "github_url": "https://github.com/PipeG8",
+      "visual_type": "hex_grid",
+      "visual_theme": "amber-dark"
+    }
+  ],
+  "contact": {
+    "linkedin": {
+      "url": "https://www.linkedin.com/in/felipeguzman-chaves",
+      "label_es": "Conecta profesionalmente",
+      "label_en": "Connect professionally"
+    },
+    "github": {
+      "url": "https://github.com/PipeG8",
+      "label_es": "Explora mi código",
+      "label_en": "Explore my code"
+    },
+    "email": {
+      "address": "felipeguzmanchaves@gmail.com",
+      "label_es": "Envíame un mensaje",
+      "label_en": "Send me a message"
+    }
+  },
+  "design": {
+    "theme": "dark",
+    "accent_color": "#c8f542",
+    "background_color": "#080808",
+    "card_color": "#0f0f0f",
+    "font_display": "Syne",
+    "font_mono": "DM Mono",
+    "language_default": "es",
+    "languages_available": ["es", "en"]
+  }
+}
